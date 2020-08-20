@@ -6,7 +6,9 @@
     "commander": "^2.6.0",
     "express": "^4.14.1",
     "http-post": "^0.1.1",
-    "http-proxy": "^1.8.1"
+    "http-proxy": "^1.8.1",
+    "mongodb": "^3.6.0",
+    "nodemon": "^2.0.4"
   },
   "main": "server.js",
   "scripts": {
@@ -14,6 +16,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/IBM-Bluemix/bluemix-hello-node.git"
-  }
+    "url": "git+https://github.com/IBM-Bluemix/bluemix-hello-node.git"
+  },
+  "description": "Hello by Alessio: This is a new commit",
+  "bugs": {
+    "url": "https://github.com/IBM-Bluemix/bluemix-hello-node/issues"
+  },
+  "homepage": "https://github.com/IBM-Bluemix/bluemix-hello-node#readme",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
 }

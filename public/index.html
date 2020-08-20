@@ -3,8 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alex's Boiler Plate</title>
 
     <!-- Compiled and minified CSS -->
@@ -14,55 +12,108 @@
     <!-- Materialize icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+
     <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="nav-wrapper" style=" background-color: #9E65A9;">
-                <a href="#" class="brand-logo" style="height: 100%;">
-                    <img src="assets/ale.jpg" alt="" class="circle responsive-img" style="height: 100%;padding-top: 5px; padding-left: 15px;"> <!-- notice the "circle" class -->
-    
+   
+            <div class="nav-wrapper" style=" background-color: rgb(215, 223, 236);">
+                    <a id='buttonLogin' class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a>
                 </a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="https://www.linkedin.com/in/alessiobonti">Linkedin</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+                
+
+       
     <main>
 
         <div class="container">
-            <h1 class="title">Alex NExUs</h1>
-            <div class="row">
-                <p class="flow-text mainText">This is a basic boilerplate i have created based on Node Express and Materialize, I hope it will help you develop your next project!</p>
-            </div>
-            <div class="row center" style="height: 150px;">
-                <img src="assets/ale2.jpg" alt="" class="circle responsive-img" style="height: 100%;padding-top: 5px; padding-left: 15px;"> <!-- notice the "circle" class -->
-    
-    
-            </div>
-            <div class="row center " style="padding-top:50px;">
-                <a id="testButton" class="waves-effect waves-light btn-large " style="background-color: #9E65A9;"><i class="material-icons left" style="color:white font-size: larger;">emoji_people</i>Click me!</a>
+            <h1 class="title" text="">INst@Bam</h1>
+			<div class="row left" style="height: 100px;">
+				<div class="profile-user-settings">
+					<img src="https://images.unsplash.com/photo-1594987057733-1fb3fe5707c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="ME" class = "profile-image" allign = "left">
+					<h3 class="user-name">Rose Fake</h3>
+					<button class="edit-Profile">Edit Profile</button>
+					<button id="upload-image"> Upload IMAGE</button>
+				</div>
+	
+				<div class="profile-stats">
+	
+					<ul>
+						<li><span class="profile-stat-count">234</span> posts</li>
+						<li><span class="profile-stat-count">10000</span> followers</li>
+						<li><span class="profile-stat-count">89</span> following</li>
+					</ul>
+	
+				</div>
+	
+				<div class="profile-bio">
+	
+					<p><span class="profile-real-name"> Rose Fake: </span> Talkings cheap 📷✈️🏕️</p>
+              
 
-    
             </div>
-    
+
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s6"><a class="active" href="#map">Map</a></li>
+                        <li class="tab col s6"><a href="#journal">Journal</a></li>
+                    </ul>
+				</div>
+				<div class="grid-container">
+					<div class="gallery-item">
+						<img src="https://images.unsplash.com/photo-1596297209536-8bddb9200cfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="gallery-image" alt="WEAR A MASK"id="pic1">
+						<div class="desc">In case you forgot</div>
+							<div class="gallery-item-info">
+			
+					<ul>
+						<li class="gallery-item-likes">Likes:<i class="fa fa-heart"style="font-size:24px;color:red" id= "count"></i> 56</li>
+						<li id="gallery-item-comments">Comments:<i class="fa fa-comment"style="font-size:24px" ></i> 2</li>
+						<a class="btn-floating btn-small waves-effect waves-light red right modal-trigger" href="#modalJournal"><i class="material-icons">add</i></a>
+						
+					</ul>	
+							</div>	
+					</div>
+						<div class="gallery-item">
+							<img src="https://images.unsplash.com/photo-1596297209536-8bddb9200cfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="gallery-image" alt="window">
+							<div class="desc">In case you forgot</div>
+								<div class="gallery-item-info">
+					<ul>
+						<li class="gallery-item-likes">Likes:<i class="fa fa-heart"style="font-size:24px;color:red"></i> 23</li>
+						<li class="gallery-item-comments">Comments:<i class="fa fa-comment"style="font-size:24px" ></i> 40</li>
+					
+						<a class="btn-floating btn-small waves-effect waves-light red right modal-trigger" href="#modalJournal"><i class="material-icons">add</i></a>
+						</ul>
+								</div>
+						</div>	
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			
+                <div id="map" class="col s12">
+                    <div id="worldMap">
+
+                    </div>
+                </div>
+
+                <!-- JOURNAL -->
+                <div id="journal" class="col s12">
+                </div>
+
+            </div>
+
 
           
         </div>
-    
-    </main>
-    <footer class="page-footer">
-        <div class="footer-copyright">
-          <div class="container">
-          © 2020 Copyright AlexNexus
-          <a class="grey-text text-lighten-4 right" href="https://github.com/alexbonti/node-material"><img src="assets/git-logo.svg" style="height: 20px; padding-right: 15px;"></i>Boiler plate here !</a>
-          </div>
-        </div>
-      </footer>
 
+    </main>
+    
 
 
 
@@ -75,8 +126,63 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
     <script src="env.js"></script>
 
 </body>
 
 </html>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <p>What is your username?</p>
+        <div class="row">
+            <div class="input-field col s12">
+                <input value="" id="username" type="text" class="validate">
+                <label class="username" for="username">Username</label>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a onclick="login()" href="#!" class="modal-close waves-effect waves-green btn-flat">Confirm</a>
+    </div>
+</div>
+
+
+<!-- Modal Structure -->
+<div id="modalComments" class="modal">
+    <div class="modal-content">
+        <h4>Comment the post </h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <input value="" id="commentText" type="text" class="validate">
+                <label class="username" for="commentText">Comment</label>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a onclick="submitPost()" href="#!" class="modal-close waves-effect waves-green btn-flat">Confirm</a>
+    </div>
+</div>
+
+
+<!-- Modal Structure -->
+<div id="modalJournal" class="modal">
+    <div class="modal-content">
+        <h4>Comment</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <input value="" id="journalText" type="text" class="validate">
+                <label class="username" for="journalText">comment ...</label>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a onclick="newJournal()" href="#!" class="modal-close waves-effect waves-green btn-flat">post</a>
+    </div>
+</div>
