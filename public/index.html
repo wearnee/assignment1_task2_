@@ -3,21 +3,34 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Alex's Boiler Plate</title>
+    <title>''''</title>
 
-    <!-- Compiled and minified CSS -->
-    <!-- Materialze-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Compiled and minified CSS -->
+        <!-- Materialze-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <!-- Materialize icons-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Materialize icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        <!-- Leaflet -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
         crossorigin="" />
-
-    <link href="styles.css" rel="stylesheet">
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+        <!-- Leaflet -->
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
+    
+            <script src="env.js"></script>
+            <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,19 +39,19 @@
                     <a id='buttonLogin' class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a>
                 </a>
                 
-
+<!-- My  work-->
        
     <main>
 
         <div class="container">
-            <h1 class="title" text="">INst@Bam</h1>
-			<div class="row left" style="height: 100px;">
-				<div class="profile-user-settings">
-					<img src="https://images.unsplash.com/photo-1594987057733-1fb3fe5707c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="ME" class = "profile-image" allign = "left">
-					<h3 class="user-name">Rose Fake</h3>
-					<button class="edit-Profile">Edit Profile</button>
-					<button id="upload-image"> Upload IMAGE</button>
-				</div>
+            <h1 class="title" text="">INst@Bland</h1>
+			    <div class="row left" style="height: 100px;">
+				        <div class="profile-user-settings">
+					        <img src="https://images.unsplash.com/photo-1594987057733-1fb3fe5707c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="ME" class = "profile-image" allign = "left">
+					        <h3 class="user-name">Rose Fake</h3>
+					        <button class="edit-Profile">Edit Profile</button>
+					        <button id="upload-image"> Upload IMAGE</button>
+				    </div>
 	
 				<div class="profile-stats">
 	
@@ -51,59 +64,30 @@
 				</div>
 	
 				<div class="profile-bio">
-	
-					<p><span class="profile-real-name"> Rose Fake: </span> Talkings cheap 📷✈️🏕️</p>
-              
-
-            </div>
+	                <p><span class="profile-real-name"> Rose Fake: </span> Talkings cheap 📷✈️🏕️</p>
+                </div>
 
             <div class="row">
-                <div class="col s12">
-                    <ul class="tabs">
-                        <li class="tab col s6"><a class="active" href="#map">Map</a></li>
-                        <li class="tab col s6"><a href="#journal">Journal</a></li>
-                    </ul>
-				</div>
+                
 				<div class="grid-container">
 					<div class="gallery-item">
 						<img src="https://images.unsplash.com/photo-1596297209536-8bddb9200cfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="gallery-image" alt="WEAR A MASK"id="pic1">
 						<div class="desc">In case you forgot</div>
-							<div class="gallery-item-info">
-			
-					<ul>
-						<li class="gallery-item-likes">Likes:<i class="fa fa-heart"style="font-size:24px;color:red" id= "count"></i> 56</li>
-						<li id="gallery-item-comments">Comments:<i class="fa fa-comment"style="font-size:24px" ></i> 2</li>
-						<a class="btn-floating btn-small waves-effect waves-light red right modal-trigger" href="#modalJournal"><i class="material-icons">add</i></a>
+                            <ul>
+						    <li class="gallery-item-likes">Likes:<i class="fa fa-heart"style="font-size:24px;color:red" id= "count"></i> 56</li>
+						    <li id="gallery-item-comments">Comments:<i class="fa fa-comment"style="font-size:24px" ></i> 2</li>
+						    <a class="btn-floating btn-small waves-effect waves-light red right modal-trigger" href="#modalJournal"><i class="material-icons">add</i></a>
+                            <p><label id="msg" href = "#msg"></label></p>
+                             <li class="tab col s6" id='msg'><a href="#msg">  </a></li>
+					        </ul>	
 						
-					</ul>	
-							</div>	
-					</div>
-						<div class="gallery-item">
-							<img src="https://images.unsplash.com/photo-1596297209536-8bddb9200cfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="gallery-image" alt="window">
-							<div class="desc">In case you forgot</div>
-								<div class="gallery-item-info">
-					<ul>
-						<li class="gallery-item-likes">Likes:<i class="fa fa-heart"style="font-size:24px;color:red"></i> 23</li>
-						<li class="gallery-item-comments">Comments:<i class="fa fa-comment"style="font-size:24px" ></i> 40</li>
-					
-						<a class="btn-floating btn-small waves-effect waves-light red right modal-trigger" href="#modalJournal"><i class="material-icons">add</i></a>
-						</ul>
-								</div>
-						</div>	
-							
-							</div>
-						</div>
+				
 					</div>
 				</div>
 			
-                <div id="map" class="col s12">
-                    <div id="worldMap">
-
-                    </div>
-                </div>
-
-                <!-- JOURNAL -->
-                <div id="journal" class="col s12">
+              
+                <!-- Alessio's modal work--> 
+                <div id="msg" class="col s12">
                 </div>
 
             </div>
@@ -112,28 +96,9 @@
           
         </div>
 
-    </main>
+        </main>
     
-
-
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <!-- Leaflet -->
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-        crossorigin=""></script>
-
-    <script src="env.js"></script>
-
-</body>
+    </body>
 
 </html>
 
@@ -166,7 +131,7 @@
         </div>
     </div>
     <div class="modal-footer">
-        <a onclick="submitPost()" href="#!" class="modal-close waves-effect waves-green btn-flat">Confirm</a>
+        <a onclick="submitPost()" href="#!" class="modal-close waves-effect waves-green btn-flat">confirm</a>
     </div>
 </div>
 
