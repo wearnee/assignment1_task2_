@@ -20,21 +20,21 @@ app.get("/test", function (request, response) {
 });
 
 // logic to insert data
-app.post('/api/journal',(req,res)=>{
+app.post('/api/msg',(req,res)=>{
   console.log('body',req.body)
-  let post=req.body;
-  insertJournal(post,res)
+  let journal=req.body;
+  insertJournal(journal,res)
 })
 
 //logic to get data
-app.get('/api/journal',(req,res)=>{
+app.get('/api/msg',(req,res)=>{
   getJournals(res)
 
 })
 
 
 //logic to udpate data
-app.put('/api/journal',(req,res)=>{
+app.put('/api/msg',(req,res)=>{
   console.log('body',req.body)
   let comment =req.body;
   updateJournal(comment,res)
@@ -54,7 +54,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true });
 let journalCollection;
 const openConnection =(message)=>{
   client.connect((err,db) => {
-  collectionMessage = client.db("messageboard").collection("messages");
+  journalCollection = client.db("messageboard").collection("messages");
   if(!err){
   console.log('connected to db; all systems go')
   }
@@ -79,6 +79,7 @@ const insertJournal=(journal,res)=>{
 // retrieve all journals
  const getJournals=(res)=>{
    journalCollection.find().toArray(function(err, result) {
+     console.log("working")
      if (err) throw err;
           res.send(result)
    })
@@ -113,14 +114,8 @@ const updateJournal=(comment,res)=>{
     }
  )
 
-}
+  }
 
-let mockJournal={
-  _id:'5f2f8ae401263f4a7895b478',
-  author:'jimbo text',
-  text:'mor text',
- 
-}
 
 openConnection()
 
